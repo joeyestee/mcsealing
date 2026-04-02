@@ -1,8 +1,10 @@
 <header class="navbar">
   <div class="nav-container">
     <a class="logo" href="/index.html">
-      <img src="/assets/images/logo.png" alt="Metro Concrete Sealing and Pressure Washing" loading="lazy" />
-      <span class="sr-only">Metro Concrete Sealing and Pressure Washing</span>
+      <span class="logo-text">
+        <span class="logo-main">METRO</span>
+        <span class="logo-sub">Concrete Sealing &amp; Pressure Washing</span>
+      </span>
     </a>
     <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
     <nav>
@@ -47,29 +49,36 @@
   .logo {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
     flex-shrink: 0;
+    text-decoration: none;
   }
-  .logo img {
-    height: auto;
-    width: 200px;
-    display: block;
-    border-radius: 8px;
+  .logo:hover {
+    opacity: 0.9;
   }
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .logo-main {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.06em;
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+  .logo-sub {
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: #7eb3e8;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 2px;
   }
   nav {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
   }
   nav a {
     color: #e0e4ea;
@@ -119,8 +128,11 @@
       padding: 0.75rem 1.25rem;
       position: relative;
     }
-    .logo img {
-      width: 150px;
+    .logo-main {
+      font-size: 1.35rem;
+    }
+    .logo-sub {
+      font-size: 0.52rem;
     }
     nav {
       display: none;
