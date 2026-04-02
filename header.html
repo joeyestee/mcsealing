@@ -1,0 +1,197 @@
+<header class="navbar">
+  <div class="nav-container">
+    <a class="logo" href="/index.html">
+      <img src="/assets/images/logo.png" alt="Metro Concrete Sealing and Pressure Washing" loading="lazy" />
+      <span class="sr-only">Metro Concrete Sealing and Pressure Washing</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/concrete-sealing.html">Concrete Sealing</a>
+      <a href="/densifiers.html">Densifiers</a>
+      <a href="/pressure-washing.html">Pressure Washing</a>
+      <a href="/fleet-washing.html">Fleet Washing</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/blog/">Blog</a>
+      <a href="/index.html#quote" class="cta-button">Get a Free Quote</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0d1117;
+    font-family: 'Montserrat', Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    padding: 0.5rem 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .navbar.scrolled {
+    background-color: rgba(13,17,23,0.97);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.75);
+  }
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0.75rem 2rem;
+    box-sizing: border-box;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .logo img {
+    height: 58px;
+    width: auto;
+    display: block;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  nav a {
+    color: #e0e4ea;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+  }
+  nav a:hover,
+  nav a:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    outline: none;
+  }
+  .cta-button {
+    background-color: #1a6dd4;
+    color: #fff !important;
+    padding: 0.55rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(26,109,212,0.3);
+  }
+  .cta-button:hover,
+  .cta-button:focus {
+    background-color: #155bb5;
+    outline: none;
+  }
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+  }
+
+  @media (max-width: 900px) {
+    .nav-container {
+      padding: 0.75rem 1.25rem;
+      position: relative;
+    }
+    .logo img {
+      height: 44px;
+    }
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: rgba(13,17,23,0.98);
+      padding: 1rem 1.25rem 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+      gap: 0.35rem;
+      z-index: 1000;
+    }
+    nav.active {
+      display: flex;
+    }
+    nav a {
+      padding: 0.85rem 0.75rem;
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      background-color: rgba(255,255,255,0.03);
+      font-size: 1rem;
+    }
+    nav a:hover,
+    nav a:focus {
+      background-color: rgba(255,255,255,0.1);
+    }
+    nav a.cta-button {
+      background-color: #1a6dd4;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(26,109,212,0.3);
+      margin-top: 0.25rem;
+    }
+    nav a.cta-button:hover,
+    nav a.cta-button:focus {
+      background-color: #155bb5;
+    }
+    .menu-toggle {
+      display: block;
+      margin-left: auto;
+      font-size: 2.2rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const navbar = document.querySelector('.navbar');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const active = nav.classList.toggle('active');
+        toggle.innerHTML = active ? '&times;' : '&#9776;';
+        toggle.setAttribute('aria-expanded', active);
+      });
+    }
+
+    if (navbar) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }, { passive: true });
+    }
+  });
+</script>

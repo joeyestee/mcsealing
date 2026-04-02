@@ -1,0 +1,126 @@
+<footer class="site-footer" style="background-color: #0d1117; color: #e0e4ea; padding: 2.5rem 1.5rem 1.5rem; font-family: 'Montserrat', Arial, sans-serif;">
+  <div class="site-footer-inner">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/assets/images/logo.png" alt="Metro Concrete Sealing and Pressure Washing" loading="lazy" />
+      <p>Commercial concrete sealing, densifier treatments, pressure washing, and fleet washing across the Omaha metro and surrounding areas.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="/concrete-sealing.html">Concrete Sealing</a></li>
+        <li><a href="/densifiers.html">Densifiers</a></li>
+        <li><a href="/pressure-washing.html">Pressure Washing</a></li>
+        <li><a href="/fleet-washing.html">Fleet Washing</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li class="footer-quote-link"><a href="/index.html#quote">Request a Quote</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><strong>Phone:</strong> 402-982-5391</p>
+      <p><strong>Location:</strong> Omaha, Nebraska</p>
+      <p><strong>Email:</strong> metrosweepseal@gmail.com</p>
+      <div class="footer-service-area" style="margin-top: 1rem;">
+        <p style="font-size: 0.85rem; color: #8891a0;">Serving Omaha, Bellevue, Papillion, La Vista, Gretna, Elkhorn, Council Bluffs, and surrounding areas.</p>
+      </div>
+    </div>
+  </div>
+  <hr class="footer-divider">
+  <div class="footer-copy">
+    &copy; <script>document.write(new Date().getFullYear())</script> Metro Concrete Sealing and Pressure Washing. All rights reserved.
+  </div>
+</footer>
+
+<style>
+  .site-footer .footer-logo {
+    width: 170px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  @media (max-width: 768px) {
+    .site-footer .footer-logo {
+      width: 140px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .site-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 1.5rem 2.5rem;
+    align-items: flex-start;
+  }
+  .site-footer-inner p,
+  .site-footer-inner a {
+    color: #9ca3b0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .site-footer-inner a:hover,
+  .site-footer-inner a:focus {
+    color: #fff;
+  }
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .footer-links a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .site-footer h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+  .footer-divider {
+    border: none;
+    border-top: 1px solid #1e2330;
+    margin: 1.5rem 0 1rem;
+  }
+  .footer-copy {
+    text-align: center;
+    color: #5c6370;
+    font-size: 0.85rem;
+  }
+  @media (max-width: 900px) {
+    .site-footer-inner {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+    .footer-links ul {
+      justify-items: center;
+    }
+    .footer-contact {
+      text-align: center;
+    }
+  }
+  @media (max-width: 540px) {
+    .site-footer-inner {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .footer-links,
+    .footer-contact {
+      text-align: center;
+    }
+    .footer-links ul {
+      justify-items: center;
+    }
+  }
+</style>

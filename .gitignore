@@ -1,0 +1,9 @@
+.DS_Store
+assets/images/.DS_Store
+assets/images/*/.DS_Store
+.claude/
+*.output
+*.md
+node_modules/
+mcsealing.zip
+photos/
